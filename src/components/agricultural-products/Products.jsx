@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { MdOutlineCurrencyRupee } from "react-icons/md";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,18 +11,20 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
-import Button from '../../shared/btn/Button';
 import { BiArrowToLeft, BiArrowToRight } from 'react-icons/bi';
+import Card from '../../shared/productsCard/Card';
 
-
-export default function Banner() {
-    const [data, setData] = useState([])
+export default function Products() {
     const prevRef = useRef(null)
     const nextRef = useRef(null)
     const [isBeginning, setBeginning] = useState(true)
     const [isEnd, setEnd] = useState(false)
+    const [data, setData] = useState([])
+    console.log(data);
+
+
     useEffect(() => {
-        fetch('/banner.json')
+        fetch('/products.json')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
@@ -32,8 +35,11 @@ export default function Banner() {
     }
     return (
         <>
-            <div className="relative">
+            <div className='relative my-12'>
+                <h2 className='text-[42px] font-medium mb-4'>Agricultural Products</h2>
                 <Swiper
+                    slidesPerView={4}
+                    centeredSlides={false}
                     pagination={{
                         type: 'fraction',
                     }}
@@ -47,34 +53,44 @@ export default function Banner() {
                     }}
                     onSlideChange={handleSlideChange}
                     modules={[Pagination, Navigation]}
-                    className="mySwiper"
-
+                    className="mySwiper px-0 mx-0"
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 10
+                        },
+                        620: {
+                            slidesPerView: 2,
+                            spaceBetween: 15
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                        },
+                        1280: {
+                            slidesPerView: 4,
+                            spaceBetween: 20
+                        }
+                    }}
                 >
                     <>
-                        {
-                            data?.map(a => {
-                                return <SwiperSlide key={a.id} className='mt-8'>
-                                    <div className='bg-[#f2f4f6] h-[500px] w-full grid grid-cols-1 lg:grid-cols-2  items-center gap-4 p-4'>
-                                        <div className='h-[470px] w-full'>
-                                            <img
-                                                className='w-full h-full rounded-md object-cover'
-                                                src={a.image}
-                                                alt="" />
-                                        </div>
-                                        <div className='w-full space-y-5'>
-                                            <h1 className='text-6xl font-bold'>{a.title}</h1>
-                                            <p>{a.description}</p>
-                                            <Button text={'Shop Now'} />
-                                        </div>
 
-                                    </div>
+                        {
+                            data?.map(p => {
+                                return <SwiperSlide key={p.id} className='w-full mx-3 rounded-md p-4 bg-[#F2F4F6]'>
+                                    <Card
+                                        title={p.title}
+                                        image={p.image}
+                                        minPrice={p.minPrice}
+                                        maxPrice={p.maxPrice}
+                                    />
                                 </SwiperSlide>
                             })
                         }
                     </>
                 </Swiper>
                 {/* Custom Buttons */}
-                <div className="absolute z-10 top-1/2 left-0 transform -translate-y-1/2">
+                <div className="absolute z-10 top-1/2 left-1 transform -translate-y-1/2">
                     <button
                         ref={prevRef}
                         disabled={isBeginning}
@@ -84,7 +100,7 @@ export default function Banner() {
                         <BiArrowToLeft />
                     </button>
                 </div>
-                <div className="absolute z-10 top-1/2 right-0 transform -translate-y-1/2">
+                <div className="absolute z-10 top-1/2  right-1 transform -translate-y-1/2">
                     <button
                         ref={nextRef}
                         disabled={isEnd}

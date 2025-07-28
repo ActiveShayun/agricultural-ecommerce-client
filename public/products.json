@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "JF Barbed Wire- 270 GSM",
+        "minPrice": "4,995.00",
+        "maxPrice": "5,589.00",
+        "image": "https://i.ibb.co/XfRQMRGr/217903-P0-ZU4-D-155.jpg"
+    },
+    {
+        "id": 2,
+        "title": "FGC RustFree Fencing Poles",
+        "minPrice": "499.00",
+        "maxPrice": "1,589.00",
+        "image": "https://i.ibb.co/6KKjQs3/bridge-way-tourists-surrounded-with-green-grid-safety-concrete-bridge-pathway-crossing-river-lake-to.jpg"
+    },
+    {
+        "id": 3,
+        "title": "GI Poultry Mesh",
+        "minPrice": "1,260.00",
+        "maxPrice": "10,750.00",
+        "image": "https://i.ibb.co/wxL21Vq/1147.jpg"
+    },
+    {
+        "id": 4,
+        "title": "JF Bluelink Mesh",
+        "minPrice": "3,067.50 ",
+        "maxPrice": "6,362.50",
+        "image": "https://i.ibb.co/JWZpwjJS/agriculture-healthy-food.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Drip Irrigation",
+        "minPrice": "7,067.50 ",
+        "maxPrice": "10,362.50",
+        "image": "https://i.ibb.co/V0X5QcBD/pexels-ruud-peter-boelens-2154084665-33116756.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Vertical Farming",
+        "minPrice": "3,067.50 ",
+        "maxPrice": "9,362.50",
+        "image": "https://i.ibb.co/Qjdnqy9M/automatic-transport-robot-transporting-plants-smart-robotic-farmers-concept.jpg"
+    }
+]

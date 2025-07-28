@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Organic Farming",
+        "description": "Sustainable farming method using natural fertilizers and crop rotation.",
+        "image": "https://i.ibb.co/5gdVXT1S/young-couple-with-vegetables-basket.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Precision Agriculture",
+        "description": "Modern farming technique using GPS and sensors for better crop yield.",
+        "image": "https://i.ibb.co/fT3P5dm/showing-eggplants.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Hydroponics",
+        "description": "Soil-less farming where plants grow in nutrient-rich water.",
+        "image": "https://i.ibb.co/6RFXh1Th/hydroponics-system-planting-vegetables-herbs-without-using-soil-health.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Agroforestry",
+        "description": "Combining agriculture and forestry to create more productive land.",
+        "image": "https://i.ibb.co/JWZpwjJS/agriculture-healthy-food.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Drip Irrigation",
+        "description": "Efficient water management system that minimizes water waste.",
+        "image": "https://i.ibb.co/S1zZhMt/close-up-gardener-watering-with-sprinkler.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Vertical Farming",
+        "description": "Growing crops in stacked layers to save space and resources.",
+        "image": "https://i.ibb.co/h1KzxFN9/special-room-equipped-growing-plants-good-conditions.jpg"
+    }
+]

@@ -5,7 +5,7 @@ import Button from "../../shared/btn/Button";
 const WhyUs = () => {
     return (
         <div className="my-16">
-            <div className="lg:text-center mb-4 lg:mb-10">
+            <div className="lg:text-center mb-4 lg:mb-10 px-4">
                 <h2 className='text-[42px] font-medium lg:mb-4'>Why Us</h2>
                 <p>
                     We specialize in delivering durable and innovative fencing solutions built to last. With

@@ -54,7 +54,7 @@ export default function Banner() {
                         {
                             data?.map(a => {
                                 return <SwiperSlide key={a.id} className='mt-8'>
-                                    <div className='bg-[#f2f4f6] h-[500px] w-full grid grid-cols-1 lg:grid-cols-2  items-center gap-4 p-4'>
+                                    <div className='bg-[#f2f4f6] lg:h-[500px] w-full grid grid-cols-1 lg:grid-cols-2  items-center gap-4 lg:gap-8 p-4'>
                                         <div className='h-[470px] w-full'>
                                             <img
                                                 className='w-full h-full rounded-md object-cover'
@@ -62,7 +62,7 @@ export default function Banner() {
                                                 alt="" />
                                         </div>
                                         <div className='w-full space-y-5'>
-                                            <h1 className='text-6xl font-bold'>{a.title}</h1>
+                                            <h1 className='text-4xl lg:text-6xl font-bold'>{a.title}</h1>
                                             <p>{a.description}</p>
                                             <Button text={'Shop Now'} />
                                         </div>

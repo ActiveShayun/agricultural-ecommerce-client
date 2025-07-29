@@ -23,7 +23,7 @@ export default function LandsCapeProducts() {
 
 
     useEffect(() => {
-        fetch('/products.json')
+        fetch('/landsCape.json')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
@@ -35,7 +35,7 @@ export default function LandsCapeProducts() {
     return (
         <>
             <div className='relative mb-20'>
-                <h2 className='text-[42px] font-medium mb-4'>
+                <h2 className='text-[42px] font-medium mb-4 ml-4 lg:ml-0'>
                    Landscape Products</h2>
                 <Swiper
                     slidesPerView={4}

@@ -9,18 +9,18 @@ import Button from "../../shared/btn/Button"
 
 const Branch = () => {
     return (
-        <div className='mb-16'>
+        <div className='mb-20'>
             {/* architecture */}
             <div className="flex justify-center mb-8">
                 <Button text={'Our Branches'} />
             </div>
-            <div className="lg:flex justify-center gap-8 grid grid-cols-3">
+            <div className="lg:flex justify-center gap-8 grid grid-cols-3 text-center">
                 <div className="bg-[#f7fce8] w-[116px] h-[104px] border border-dashed">
                     <img
                         className="mx-auto w-full h-full p-2"
                         src={paris}
                         alt="paris" />
-                    <p className="bg-[#f7fce8] font-medium uppercase w-full p-2 border border-dashed">Coimbatore</p>
+                    <p className="bg-[#f7fce8] font-medium uppercase w-full text-center p-2 border border-dashed">Coimbatore</p>
                 </div>
                 <div className="w-[116px] h-[104px] border border-dashed">
                     <img
@@ -41,7 +41,7 @@ const Branch = () => {
                         className="mx-auto w-full h-full p-2"
                         src={goa}
                         alt="" />
-                    <p className="font-medium uppercase w-full p-2 border border-dashed">goa</p>
+                    <p className="font-medium uppercase w-full  p-2 border border-dashed">goa</p>
                 </div>
                 <div className="w-[116px] h-[104px] border border-dashed">
                     <img

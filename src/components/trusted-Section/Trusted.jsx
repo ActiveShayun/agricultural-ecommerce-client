@@ -4,7 +4,7 @@ import { CiDeliveryTruck } from "react-icons/ci";
 
 const Trusted = () => {
     return (
-        <div className='py-20 bg-gradient-to-tl from-[#002b55] to-[#07417a] rounded-md'>
+        <div className='py-20 bg-gradient-to-tl from-[#002b55] to-[#07417a] rounded-md px-4'>
             <div>
                 <h2 className='text-[42px] font-medium text-white lg:text-center mb-4'>
                     Trusted by over 6K+ customers</h2>

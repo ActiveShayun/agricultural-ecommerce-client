@@ -36,7 +36,7 @@ export default function Products() {
     return (
         <>
             <div className='relative my-12'>
-                <h2 className='text-[42px] font-medium mb-4'>Agricultural Products</h2>
+                <h2 className='text-[42px] font-medium mb-4 ml-4 lg:ml-0'>Agricultural Products</h2>
                 <Swiper
                     slidesPerView={4}
                     centeredSlides={false}

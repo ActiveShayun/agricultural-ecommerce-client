@@ -33,7 +33,8 @@ const Testimonial = () => {
     }
     return (
         <div className="my-16">
-            <h3 className="text-[42px] font-medium lg:text-center text-left lg:mb-10 mb-4">Why Customers Love ❤️ Us?</h3>
+            <h3 className="text-[42px] font-medium lg:text-center text-left lg:mb-10 mb-4 ml-4">
+                Why Customers Love ❤️ Us?</h3>
             <div className="relative">
                 <Swiper
                     pagination={{

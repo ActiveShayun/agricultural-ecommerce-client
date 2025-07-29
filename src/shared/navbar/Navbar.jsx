@@ -14,7 +14,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 pr-4 lg:pr-0">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,16 +32,18 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
-            <div className="flex flex-col justify-center text-center font-bold">
-                <p className='text-3xl text-center flex justify-center'>
-                    <MdHouseboat />
-                </p>
-                <p className='text-4xl'>
-                    <samp className='text-[#B0DD1D]'>
-                        J
-                    </samp>
-                    F
-                </p>
+            <div className='hidden lg:block'>
+                <div className="flex flex-col justify-center text-center font-bold ">
+                    <p className='text-3xl text-center flex justify-center relative top-3'>
+                        <MdHouseboat/>
+                    </p>
+                    <p className='text-4xl'>
+                        <samp className='text-[#B0DD1D]'>
+                            J
+                        </samp>
+                        F
+                    </p>
+                </div>
             </div>
             <div className="navbar-end flex items-center gap-8">
                 <div className='text-lg flex items-center gap-2'>

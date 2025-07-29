@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Antiqo Fence",
+        "minPrice": "5,995.00",
+        "maxPrice": "5,589.00",
+        "image": "https://i.ibb.co/4nx4CChM/pexels-bayram-yalcin-86843184-33202730.jpg"
+    },
+    {
+        "id": 2,
+        "title": "JF Australian Trellis",
+        "minPrice": "499.00",
+        "maxPrice": "1,589.00",
+        "image": "https://i.ibb.co/Xr1V1RTh/pexels-anurag-sarkar-2154341957-33174437.jpg"
+    },
+    {
+        "id": 3,
+        "title": "JF Polyhex Mesh",
+        "minPrice": "1,260.00",
+        "maxPrice": "10,750.00",
+        "image": "https://i.ibb.co/wxL21Vq/1147.jpg"
+    },
+    {
+        "id": 4,
+        "title": "JF Privezy Grass Wall",
+        "minPrice": "3,067.50 ",
+        "maxPrice": "6,362.50",
+        "image": "https://i.ibb.co/zhH2Cm8Z/pexels-rex-way-1992253-3613236.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Drip Irrigation",
+        "minPrice": "7,067.50 ",
+        "maxPrice": "10,362.50",
+        "image": "https://i.ibb.co/V0X5QcBD/pexels-ruud-peter-boelens-2154084665-33116756.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Vertical Farming",
+        "minPrice": "3,067.50 ",
+        "maxPrice": "9,362.50",
+        "image": "https://i.ibb.co/Qjdnqy9M/automatic-transport-robot-transporting-plants-smart-robotic-farmers-concept.jpg"
+    }
+]

@@ -6,6 +6,7 @@ import Trusted from '../trusted-Section/Trusted';
 import WhyUs from '../why-us/WhyUs';
 import Shipping from '../shippingAcross/Shipping';
 import Testimonial from '../testimonial/Testimonial';
+import Branch from '../ourBranch/Branch';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <WhyUs />
       <Shipping />
       <Testimonial />
+      <Branch/>
     </div>
   );
 };

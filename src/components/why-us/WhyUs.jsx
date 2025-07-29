@@ -5,14 +5,14 @@ import Button from "../../shared/btn/Button";
 const WhyUs = () => {
     return (
         <div className="my-16">
-            <div className="lg:text-center mb-8 lg:mb-10">
-                <h2 className='text-[42px] font-medium mb-4'>Why Us</h2>
+            <div className="lg:text-center mb-4 lg:mb-10">
+                <h2 className='text-[42px] font-medium lg:mb-4'>Why Us</h2>
                 <p>
                     We specialize in delivering durable and innovative fencing solutions built to last. With
                     <span className="lg:block">a focus on quality and trust, we help secure spaces across industries and</span>
                     communities.</p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10">
                 <div className="bg-linear-to-tl from-[#a2c8ee] to-[#f2f4f6] p-10 space-y-4 rounded-md lg:relative lg:top-16">
                     <p><MdOutlineAlarmOn className="w-10 h-12" /></p>
                     <h3 className="text-[25px] font-medium">Unmatched Durability with Corrosion-Free Technology</h3>

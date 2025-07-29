@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Mr. Surzo Rudro",
+    "photo": "https://i.ibb.co/1Jj6MnWX/pexels-linkedin-2182970.jpg",
+    "reviewStar": 4.5,
+    "review": "The atmosphere was warm and welcoming from the moment we arrived. Staff were attentive and made sure we were comfortable throughout. I especially enjoyed the dessert — it was the perfect ending to the night."
+  },
+  {
+    "id": 2,
+    "name": "Brian Lee",
+    "photo": "https://i.ibb.co/463h0BS/pexels-chloekalaartist-1043474.jpg",
+    "reviewStar": 4.2,
+    "review": "I came here with friends and we all had a great time. The food came out quickly and everything tasted fresh and flavorful. Portions were generous, and the prices were very reasonable."
+  },
+  {
+    "id": 3,
+    "name": "Cynthia Gomez",
+    "photo": "https://i.ibb.co/v4Ns3zN4/pexels-joelson-melo-9135-50855.jpg",
+    "reviewStar": 4.8,
+    "review": "One of the best dining experiences I’ve had in a while. The presentation was stunning and each dish had a unique flavor profile. Highly recommend making a reservation in advance — it gets busy!"
+  },
+  {
+    "id": 4,
+    "name": "David Kim",
+    "photo": "https://i.ibb.co/b5K3wXKZ/pexels-nappy-3460134.jpg",
+    "reviewStar": 3.9,
+    "review": "The location is convenient and the decor is modern and clean. Service could be a bit more prompt, but the food quality made up for it. I'd give it another try on a less busy day."
+  },
+  {
+    "id": 5,
+    "name": "Emily Ross",
+    "photo": "https://i.ibb.co/mrRWnN5z/pexels-olly-3760339.jpg",
+    "reviewStar": 4.7,
+    "review": "This place is a hidden gem! Everything from appetizers to cocktails was thoughtfully crafted. The staff went above and beyond to accommodate our needs, which made the experience unforgettable."
+  }
+]

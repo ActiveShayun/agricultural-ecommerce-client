@@ -6,13 +6,11 @@ const Card = ({ title, image, minPrice, maxPrice }) => {
     return (
         <div>
             {/* image container */}
-            <div className='h-56  w-full relative group
-                                    overflow-hidden'>
+            <div className='h-56 w-full relative group overflow-hidden'>
                 <img className='w-full h-full rounded-md object-cover group-hover:scale-125 scale-100 transition transform duration-600 ease-in-out '
                     src={image} alt={title} />
-                <div className='bg-black absolute 
-                                            top-0 left-0 w-full h-full rounded-md opacity-45 '></div>
-
+                <div className='bg-black absolute
+                   top-0 left-0 w-full h-full rounded-md opacity-45'></div>
             </div>
             {/* text content */}
             <div className='mt-4'>

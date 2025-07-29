@@ -22,12 +22,12 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3  p-2 shadow w-full">
                         {deskTopMenu}
                     </ul>
                 </div>
-                <div>
-                    <ul className="menu menu-horizontal px-1 flex items-center gap-8 text-lg">
+                <div className='hidden lg:block'>
+                    <ul className="menu  menu-horizontal px-1 flex items-center gap-8 text-lg">
                         {deskTopMenu}
                     </ul>
                 </div>

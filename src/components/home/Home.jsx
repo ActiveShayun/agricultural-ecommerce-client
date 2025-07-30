@@ -11,7 +11,7 @@ import Branch from '../ourBranch/Branch';
 const Home = () => {
   return (
     <div>
-      <Banner />
+      <Banner /> 
       <Products />
       <LandsCapeProducts />
       <Trusted />

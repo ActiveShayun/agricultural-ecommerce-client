@@ -10,8 +10,16 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
-import { BiArrowToLeft, BiArrowToRight } from 'react-icons/bi';
 import Card from '../../shared/productsCard/Card';
+import AnimatedText from '../../shared/animateText/AnimateText';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import SliderNext from '../../shared/sliderButton/SliderNext';
+import SliderPrev from '../../shared/sliderButton/SliderPrev';
+// ..
+AOS.init({
+    once: true
+});
 
 export default function LandsCapeProducts() {
     const prevRef = useRef(null)
@@ -34,9 +42,14 @@ export default function LandsCapeProducts() {
     }
     return (
         <>
-            <div className='relative mb-20'>
-                <h2 className='text-[42px] font-medium mb-4 ml-4 lg:ml-0'>
-                   Landscape Products</h2>
+            <div
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+                className='relative mb-20'>
+                <div className='text-[42px] font-medium mb-4 ml-4 lg:ml-0'>
+                    <AnimatedText text={'Landscape Products'} />
+                </div>
                 <Swiper
                     slidesPerView={4}
                     centeredSlides={false}
@@ -74,10 +87,10 @@ export default function LandsCapeProducts() {
                     }}
                 >
                     <>
-
                         {
                             data?.map(p => {
-                                return <SwiperSlide key={p.id} className='w-full mx-3 rounded-md   p-4 bg-[#F2F4F6]'>
+                                return <SwiperSlide
+                                    key={p.id} className='w-full mx-3 rounded-md   p-4 bg-[#F2F4F6]'>
                                     <Card
                                         title={p.title}
                                         image={p.image}
@@ -91,24 +104,14 @@ export default function LandsCapeProducts() {
                 </Swiper>
                 {/* Custom Buttons */}
                 <div className="absolute z-10 top-1/2 left-1 transform -translate-y-1/2">
-                    <button
-                        ref={prevRef}
-                        disabled={isBeginning}
-                        className={` ${isBeginning ? 'bg-gray-300 cursor-not-allowed pointer-events-none'
-                            :
-                            'bg-[#B0DD1D] text-white'} p-2 rounded-full hover:bg-gray-800`}>
-                        <BiArrowToLeft />
-                    </button>
+                    <SliderPrev
+                        isBeginning={isBeginning}
+                        prevRef={prevRef} />
                 </div>
                 <div className="absolute z-10 top-1/2  right-1 transform -translate-y-1/2">
-                    <button
-                        ref={nextRef}
-                        disabled={isEnd}
-                        className={` ${isEnd ? 'bg-gray-300 cursor-not-allowed pointer-events-none'
-                            :
-                            'bg-[#B0DD1D] text-white'} p-2 rounded-full hover:bg-gray-800`}>
-                        <BiArrowToRight />
-                    </button>
+                    <SliderNext
+                        nextRef={nextRef}
+                        isEnd={isEnd} />
                 </div>
             </div>
         </>

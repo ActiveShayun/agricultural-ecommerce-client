@@ -1,8 +1,37 @@
 import { FiAward } from "react-icons/fi";
 import { CiFaceSmile } from "react-icons/ci";
 import { CiDeliveryTruck } from "react-icons/ci";
+import CountUp from "react-countup";
+import { useEffect, useRef, useState } from "react";
 
 const Trusted = () => {
+    const [startCount, setStartCount] = useState(false);
+    const countRef = useRef(null);
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry], observerInstant) => {
+                if (entry.isIntersecting) {
+                    setStartCount(true)
+                    observerInstant.disconnect()
+                }
+            },
+            {
+                threshold: 0.3,
+                rootMargin: '0px 0px -50px 0px'
+
+            }
+        );
+        if (countRef.current) {
+            observer.observe(countRef.current)
+        }
+
+        return () => {
+            if (countRef.current) {
+                observer.unobserve(countRef.current)
+            }
+        }
+    }, [])
+
     return (
         <div className='py-20 bg-gradient-to-tl from-[#002b55] to-[#07417a] rounded-md px-4'>
             <div>
@@ -20,15 +49,16 @@ const Trusted = () => {
                         <span>Products</span>
                     </p>
                 </div>
-                <div className='flex items-center gap-4'>
+                <div ref={countRef} className='flex items-center gap-4'>
                     <span className='w-20 h-20 rounded-full bg-white
                      flex items-center justify-center text-black text-3xl'>
                         <CiFaceSmile />
                     </span>
-                    <p>
-                        <span className='text-3xl font-medium block'>4000+</span>
-                        <span>Google Review</span>
-                    </p>
+                    <div className="text-3xl font-medium block">
+                        {startCount && <CountUp delay={0} end={4000} />}
+                        <span className="ml-1">+ Google Review</span>
+                    </div>
+
                 </div>
                 <div className='flex items-center gap-4'>
                     <span className='w-20 h-20 rounded-full bg-white

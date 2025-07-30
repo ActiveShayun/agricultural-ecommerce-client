@@ -13,6 +13,10 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import { BiArrowToLeft, BiArrowToRight } from 'react-icons/bi';
 import Card from '../../shared/productsCard/Card';
+import AnimatedText from '../../shared/animateText/AnimateText';
+import SliderPrev from '../../shared/sliderButton/SliderPrev';
+import SliderNext from '../../shared/sliderButton/SliderNext';
+
 
 export default function Products() {
     const prevRef = useRef(null)
@@ -35,8 +39,11 @@ export default function Products() {
     }
     return (
         <>
-            <div className='relative my-12'>
-                <h2 className='text-[42px] font-medium mb-4 ml-4 lg:ml-0'>Agricultural Products</h2>
+            <div
+                className='relative my-12'>
+                <div className='text-[42px] font-medium mb-4 ml-4 lg:ml-0'>
+                    <AnimatedText text={'Agricultural Products'} />
+                </div>
                 <Swiper
                     slidesPerView={4}
                     centeredSlides={false}
@@ -77,7 +84,8 @@ export default function Products() {
 
                         {
                             data?.map(p => {
-                                return <SwiperSlide key={p.id} className='w-full mx-3 rounded-md p-4 bg-[#F2F4F6]'>
+                                return <SwiperSlide key={p.id}
+                                    className='w-full mx-3 rounded-md p-4 bg-[#F2F4F6]'>
                                     <Card
                                         title={p.title}
                                         image={p.image}
@@ -91,24 +99,14 @@ export default function Products() {
                 </Swiper>
                 {/* Custom Buttons */}
                 <div className="absolute z-10 top-1/2 left-1 transform -translate-y-1/2">
-                    <button
-                        ref={prevRef}
-                        disabled={isBeginning}
-                        className={` ${isBeginning ? 'bg-gray-300 cursor-not-allowed pointer-events-none'
-                            :
-                            'bg-[#B0DD1D] text-white'} p-2 rounded-full hover:bg-gray-800`}>
-                        <BiArrowToLeft />
-                    </button>
+                    <SliderPrev
+                        isBeginning={isBeginning}
+                        prevRef={prevRef} />
                 </div>
                 <div className="absolute z-10 top-1/2  right-1 transform -translate-y-1/2">
-                    <button
-                        ref={nextRef}
-                        disabled={isEnd}
-                        className={` ${isEnd ? 'bg-gray-300 cursor-not-allowed pointer-events-none'
-                            :
-                            'bg-[#B0DD1D] text-white'} p-2 rounded-full hover:bg-gray-800`}>
-                        <BiArrowToRight />
-                    </button>
+                    <SliderNext
+                        nextRef={nextRef}
+                        isEnd={isEnd} />
                 </div>
             </div>
         </>

@@ -12,6 +12,15 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import Button from '../../shared/btn/Button';
 import { BiArrowToLeft, BiArrowToRight } from 'react-icons/bi';
+import AnimatedText from '../../shared/animateText/AnimateText';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import SliderPrev from '../../shared/sliderButton/SliderPrev';
+import SliderNext from '../../shared/sliderButton/SliderNext';
+// ..
+AOS.init({
+    once: true
+});
 
 
 export default function Banner() {
@@ -54,7 +63,11 @@ export default function Banner() {
                         {
                             data?.map(a => {
                                 return <SwiperSlide key={a.id} className='mt-8'>
-                                    <div className='bg-[#f2f4f6] lg:h-[500px] w-full grid grid-cols-1 lg:grid-cols-2  items-center gap-4 lg:gap-8 p-4'>
+                                    <div
+                                        data-aos="fade-down"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1500"
+                                        className='bg-[#f2f4f6] lg:h-[500px] w-full grid grid-cols-1 lg:grid-cols-2  items-center gap-4 lg:gap-8 p-4'>
                                         <div className='h-[470px] w-full'>
                                             <img
                                                 className='w-full h-full rounded-md object-cover'
@@ -62,7 +75,9 @@ export default function Banner() {
                                                 alt="" />
                                         </div>
                                         <div className='w-full space-y-5'>
-                                            <h1 className='text-4xl lg:text-6xl font-bold'>{a.title}</h1>
+                                            <div className='text-4xl lg:text-6xl font-bold flex'>
+                                                <AnimatedText text={a.title} />
+                                            </div>
                                             <p>{a.description}</p>
                                             <Button text={'Shop Now'} />
                                         </div>
@@ -74,25 +89,15 @@ export default function Banner() {
                     </>
                 </Swiper>
                 {/* Custom Buttons */}
-                <div className="absolute z-10 top-1/2 left-0 transform -translate-y-1/2">
-                    <button
-                        ref={prevRef}
-                        disabled={isBeginning}
-                        className={` ${isBeginning ? 'bg-gray-300 cursor-not-allowed pointer-events-none'
-                            :
-                            'bg-[#B0DD1D] text-white'} p-2 rounded-full hover:bg-gray-800`}>
-                        <BiArrowToLeft />
-                    </button>
+                <div className="absolute z-10 top-1/2 left-1 transform -translate-y-1/2">
+                    <SliderPrev
+                        isBeginning={isBeginning}
+                        prevRef={prevRef} />
                 </div>
-                <div className="absolute z-10 top-1/2 right-0 transform -translate-y-1/2">
-                    <button
-                        ref={nextRef}
-                        disabled={isEnd}
-                        className={` ${isEnd ? 'bg-gray-300 cursor-not-allowed pointer-events-none'
-                            :
-                            'bg-[#B0DD1D] text-white'} p-2 rounded-full hover:bg-gray-800`}>
-                        <BiArrowToRight />
-                    </button>
+                <div className="absolute z-10 top-1/2  right-1 transform -translate-y-1/2">
+                    <SliderNext
+                        nextRef={nextRef}
+                        isEnd={isEnd} />
                 </div>
             </div>
         </>

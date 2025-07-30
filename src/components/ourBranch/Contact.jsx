@@ -2,6 +2,11 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import Button from "../../shared/btn/Button";
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+AOS.init({
+    once: true
+});
 
 const Contact = () => {
     const [position, setPosition] = useState([23.8103, 90.4125]); // default fallback
@@ -26,7 +31,10 @@ const Contact = () => {
     }, []);
     return (
         <div className=" text-white mt-18 rounded-md grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
-            <div className='w-full space-y-4 col-span-1 bg-[#002b55] p-12 rounded-md'>
+            <div
+                data-aos="fade-up"
+                data-aos-duration="3000"
+                className='w-full space-y-4 col-span-1 bg-[#002b55] p-12 rounded-md'>
                 <h2 className='text-4xl font-medium'>Contact Us</h2>
                 {/* name */}
                 <div>
@@ -57,7 +65,11 @@ const Contact = () => {
             </div>
 
             {/* map */}
-            <div className="col-span-2 w-full lg:h-full rounded-md h-[400px]">
+            <div
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+                className="col-span-2 w-full lg:h-full rounded-md h-[400px]">
                 <MapContainer
                     center={position}
                     zoom={13}

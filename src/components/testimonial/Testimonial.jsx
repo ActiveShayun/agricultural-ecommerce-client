@@ -13,6 +13,11 @@ import { Pagination, Navigation } from 'swiper/modules';
 import { BiArrowToLeft, BiArrowToRight } from 'react-icons/bi';
 import { FaQuoteLeft } from "react-icons/fa";
 import { Rating } from '@mui/material';
+import AnimatedText from '../../shared/animateText/AnimateText';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 const Testimonial = () => {
@@ -65,9 +70,9 @@ const Testimonial = () => {
                                                 <p>{r.review}</p>
                                             </div>
                                             <div>
-                                                <h4 className='text-3xl font-semibold mb-2'>
-                                                    {r.name}
-                                                </h4>
+                                                <div className='text-3xl font-semibold mb-2'>
+                                                    <AnimatedText text={r.name} />
+                                                </div>
                                                 <Rating
                                                     name="half-rating-read"
                                                     defaultValue={r.reviewStar}
@@ -77,8 +82,12 @@ const Testimonial = () => {
                                         </div>
                                         {/* image container */}
                                         <div className='h-[500px] w-full col-span-1'>
-                                            <div className='max-w-full h-full p-4 overflow-hidden relative group'>
+                                            <div
+                                                data-aos="fade-up"
+                                                data-aos-anchor-placement="center-center"
+                                                className='max-w-full h-full p-4 overflow-hidden relative group'>
                                                 <img
+
                                                     className='w-full h-full mx-auto rounded-md object-cover group-hover:scale-125 scale-100
                                                 transition transform duration-600 ease-in-out'
                                                     src={r.photo} alt={r.name} />
